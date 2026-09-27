@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", Consolas, monospace;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --color-bg: #0d1117;
+  --color-panel: #161b22;
+  --color-panel-2: #1c2330;
+  --color-line: #30363d;
+  --color-fg: #e6edf3;
+  --color-dim: #8b949e;
+  --color-green: #3fb950;
+  --color-blue: #79c0ff;
+  --color-purple: #d2a8ff;
+  --color-orange: #ffa657;
+  --color-red: #ff7b72;
+  --color-yellow: #e3b341;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  @apply bg-bg text-fg font-sans antialiased;
+  background-image:
+    linear-gradient(rgb(48 54 61 / 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(48 54 61 / 0.25) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+::selection { background: rgb(63 185 80 / 0.35); }
+
+@utility window {
+  @apply rounded-xl border border-line bg-panel shadow-[0_24px_60px_-24px_rgb(0_0_0/0.8)];
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-mono text-sm font-bold transition;
+}
+@utility btn-green {
+  @apply btn bg-green text-bg hover:-translate-y-0.5 hover:brightness-110;
+}
+@utility btn-outline {
+  @apply btn border border-line text-fg hover:-translate-y-0.5 hover:border-green hover:text-green;
+}
+
+.caret::after { content: "▋"; margin-left: 2px; color: var(--color-green); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.shown { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .caret::after { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
