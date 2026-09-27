@@ -103,7 +103,7 @@ export default function Projects() {
     <section id="projects" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
       <SectionHead cmd={s.cmd} title={t(s)} />
       {featured.map((p) => <Reveal key={p.id}><Confidential p={p} /></Reveal>)}
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {others.map((p, i) => (
           <Reveal key={p.id} delay={i * 100} className="h-full"><Card p={p} /></Reveal>
         ))}

@@ -149,6 +149,23 @@ export const projects: Project[] = [
     tags: ['React 19', 'Express 5', 'MongoDB', 'Helmet', 'RTL'],
   },
   {
+    id: 'nexus',
+    name: 'Nexus',
+    tagline: { fr: 'Messagerie chiffrée avec appels vidéo', en: 'Encrypted messenger with video calls' },
+    text: {
+      fr: 'Application de messagerie type WhatsApp / Telegram : chiffrement de bout en bout, appels vidéo et audio, groupes privés et partage de fichiers avec aperçu.',
+      en: 'WhatsApp / Telegram-style messenger: end-to-end encryption, video and audio calls, private groups and file sharing with previews.',
+    },
+    highlights: {
+      fr: ['chiffrement de bout en bout', 'appels vidéo WebRTC', 'groupes avec rôles admin', 'aperçu PDF, Word, Excel'],
+      en: ['end-to-end encryption', 'WebRTC video calls', 'groups with admin roles', 'PDF, Word, Excel previews'],
+    },
+    tags: ['React', 'Node', 'MongoDB', 'Socket.io', 'WebRTC', 'Cloudinary'],
+    repo: 'https://github.com/kimo0000/chat-app-fullstack-Nexus-MERN',
+    demo: 'https://chat-app-fullstack-nexus-mern.vercel.app',
+    image: '/projects/nexus.jpg',
+  },
+  {
     id: 'dashboard',
     name: 'Admin Dashboard',
     tagline: { fr: 'Tableau de bord pour PME', en: 'SME admin dashboard' },
@@ -202,7 +219,7 @@ export const steps: { title: Text; text: Text }[] = [
 // --- Technologies ---------------------------------------------------------------------
 export const stack: Record<string, string[]> = {
   frontend: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-  backend: ['Node.js', 'Express', 'REST API', 'Socket.io'],
+  backend: ['Node.js', 'Express', 'REST API', 'Socket.io', 'WebRTC'],
   data: ['MongoDB', 'Mongoose', 'Firebase'],
   ops: ['Helmet', 'bcrypt', 'Stripe', 'Vercel', 'Git'],
 };
