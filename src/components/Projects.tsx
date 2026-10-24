@@ -72,12 +72,17 @@ function Card({ p }: { p: Project }) {
   const { t, lang } = useLang();
   return (
     <Window title={`~/projets/${p.id}`} className="flex h-full flex-col">
-      {p.image && (
+      {p.image && (p.demo ?? p.repo ? (
         <a href={p.demo ?? p.repo} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border-b border-line bg-white">
           <img src={p.image} alt={`${p.name} — ${t(p.tagline)}`} loading="lazy"
             className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]" />
         </a>
-      )}
+      ) : (
+        // Projet client au code privé : capture seule, sans lien.
+        <div className="overflow-hidden border-b border-line bg-white">
+          <img src={p.image} alt={`${p.name} — ${t(p.tagline)}`} loading="lazy" className="aspect-[16/10] w-full object-cover object-top" />
+        </div>
+      ))}
       <div className="flex flex-1 flex-col p-5">
         <h3 className="font-mono text-lg font-bold">{p.name}</h3>
         <p className="mt-0.5 font-mono text-xs text-green">{t(p.tagline)}</p>

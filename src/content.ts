@@ -149,6 +149,21 @@ export const projects: Project[] = [
     tags: ['React 19', 'Express 5', 'MongoDB', 'Helmet', 'RTL'],
   },
   {
+    id: 'personnel',
+    name: 'Gestion du personnel',
+    tagline: { fr: 'Application RH hors ligne, PC + Android', en: 'Offline HR app, desktop + Android' },
+    text: {
+      fr: 'Application de gestion du personnel utilisée par une administration : fiches des membres, organigramme, congés et planning, stages, documents imprimés avec en-tête et signature. Interface en arabe et en français. Captures avec des données fictives.',
+      en: 'Personnel management app used by a public office: staff records, org chart, leave and planning, trainings, printed documents with letterhead and signature. Arabic and French interface. Screenshots use fictitious data.',
+    },
+    highlights: {
+      fr: ['base chiffrée AES-256, sans internet', 'rôles, verrou et clé de secours', 'export PDF, Word, Excel', 'audit de sécurité + 250 tests'],
+      en: ['AES-256 encrypted DB, no internet', 'roles, lock and recovery key', 'PDF, Word, Excel export', 'security audit + 250 tests'],
+    },
+    tags: ['Electron', 'React 19', 'TypeScript', 'SQLite', 'Capacitor', 'RTL'],
+    image: '/projects/personnel.jpg',
+  },
+  {
     id: 'nexus',
     name: 'Nexus',
     tagline: { fr: 'Messagerie chiffrée avec appels vidéo', en: 'Encrypted messenger with video calls' },
@@ -218,8 +233,8 @@ export const steps: { title: Text; text: Text }[] = [
 
 // --- Technologies ---------------------------------------------------------------------
 export const stack: Record<string, string[]> = {
-  frontend: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+  frontend: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Electron', 'Capacitor'],
   backend: ['Node.js', 'Express', 'REST API', 'Socket.io', 'WebRTC'],
-  data: ['MongoDB', 'Mongoose', 'Firebase'],
+  data: ['MongoDB', 'Mongoose', 'Firebase', 'SQLite'],
   ops: ['Helmet', 'bcrypt', 'Stripe', 'Vercel', 'Git'],
 };
