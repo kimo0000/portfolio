@@ -153,12 +153,12 @@ export const projects: Project[] = [
     name: 'Gestion du personnel',
     tagline: { fr: 'Application RH hors ligne, PC + Android', en: 'Offline HR app, desktop + Android' },
     text: {
-      fr: 'Application de gestion du personnel utilisée par une administration : fiches des membres, organigramme par niveaux modifiable, congés et planning, stages, arrêts maladie, lettres officielles et documents imprimés avec en-tête et signature, modifiables avant impression. Interface en arabe et en français, adaptée à tous les écrans. Captures avec des données fictives.',
-      en: 'Personnel management app used by a public office: staff records, editable multi-level org chart, leave and planning, trainings, sick leave, official letters and printed documents with letterhead and signature, editable before printing. Arabic and French interface that fits every screen size. Screenshots use fictitious data.',
+      fr: 'Application de gestion du personnel utilisée par une administration : fiches des membres, organigramme par niveaux modifiable, congés et planning, stages, arrêts maladie, lettres officielles et documents imprimés avec en-tête et signature, modifiables avant impression. Le client crée ses propres règles à plusieurs conditions et ses propres onglets, chacun avec son tableau de bord personnalisable. Interface en arabe et en français, adaptée à tous les écrans. Captures avec des données fictives.',
+      en: 'Personnel management app used by a public office: staff records, editable multi-level org chart, leave and planning, trainings, sick leave, official letters and printed documents with letterhead and signature, editable before printing. The client builds his own multi-condition rules and his own tabs, each with a customizable dashboard. Arabic and French interface that fits every screen size. Screenshots use fictitious data.',
     },
     highlights: {
-      fr: ['base chiffrée AES-256, sans internet', 'rôles, verrou et clé de secours', 'export PDF, Word, Excel', '2 audits de sécurité + 280 tests'],
-      en: ['AES-256 encrypted DB, no internet', 'roles, lock and recovery key', 'PDF, Word, Excel export', '2 security audits + 280 tests'],
+      fr: ['base chiffrée AES-256, sans internet', 'rôles, verrou et clé de secours', 'export PDF, Word, Excel', '4 audits de sécurité + 300 tests'],
+      en: ['AES-256 encrypted DB, no internet', 'roles, lock and recovery key', 'PDF, Word, Excel export', '4 security audits + 300 tests'],
     },
     tags: ['Electron', 'React 19', 'TypeScript', 'SQLite', 'Capacitor', 'RTL'],
     image: '/projects/personnel.jpg',
