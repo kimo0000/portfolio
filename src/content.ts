@@ -164,6 +164,21 @@ export const projects: Project[] = [
     image: '/projects/personnel.jpg',
   },
   {
+    id: 'activite',
+    name: 'Suivi d’activité',
+    confidential: true,
+    tagline: { fr: 'Suivi mensuel d’activité hors ligne, PC + Android', en: 'Offline monthly activity tracking, desktop + Android' },
+    text: {
+      fr: 'Application de suivi mensuel d’activité pour une administration organisée en unités et en sites : saisie mensuelle dans une grille type Excel, import de fichiers Excel, totaux identiques au tableur, classement sur 100 avec critères pondérés, comparaison entre unités et entre périodes, rapports PDF et Word. Sans réseau : les postes de saisie envoient des fichiers chiffrés au poste central, et une application Android en lecture seule ouvre un fichier chiffré avec un code. Interface en arabe.',
+      en: 'Monthly activity tracking app for an administration organised in units and sites: monthly entry in an Excel-like grid, Excel file import, totals identical to the spreadsheet, weighted ranking out of 100, comparison between units and between periods, PDF and Word reports. No network needed: entry stations send encrypted files to the central station, and a read-only Android app opens an encrypted file with a code. Arabic interface.',
+    },
+    highlights: {
+      fr: ['100 % hors ligne, fichiers chiffrés AES-256', 'app Android : mêmes calculs que le PC', 'licence signée, sauvegardes chiffrées', '680+ tests automatisés'],
+      en: ['100% offline, AES-256 encrypted files', 'Android app: same calculations as desktop', 'signed licence, encrypted backups', '680+ automated tests'],
+    },
+    tags: ['Electron', 'React 19', 'Express 5', 'MongoDB', 'Capacitor', 'RTL'],
+  },
+  {
     id: 'nexus',
     name: 'Nexus',
     tagline: { fr: 'Messagerie chiffrée avec appels vidéo', en: 'Encrypted messenger with video calls' },
